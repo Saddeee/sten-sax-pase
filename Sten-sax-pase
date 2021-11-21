@@ -1,6 +1,9 @@
 
 public class Sten_sax_påse {
 
+    static int human = 0;
+    static int data = 0;
+
     public static void main(String[] args) {
         // TODO code application logic here
         kör();
@@ -24,14 +27,14 @@ public class Sten_sax_påse {
             switch (svar) {
 
                 case "sten":
-                    condition("sten", randm(), gngr);
+                    condition("sten", randm());
 
                     break;
                 case "pase":
-                    condition("påse", randm(), gngr);
+                    condition("påse", randm());
                     break;
                 case "sax":
-                    condition("sax", randm(), gngr);
+                    condition("sax", randm());
                     break;
                 default:
                     System.out.println("Fel inamt");
@@ -53,10 +56,7 @@ public class Sten_sax_påse {
         return ran;
     }
 
-    static void condition(String s, String s2, int antal) {
-        int data = 0;
-        int human = 0;
-
+    static void condition(String s, String s2) {
         if (s == "sten" && s2 == "sax") {
             System.out.println("Du valde " + s + " Datorn valde " + s2);
             System.out.println("Du vann");
